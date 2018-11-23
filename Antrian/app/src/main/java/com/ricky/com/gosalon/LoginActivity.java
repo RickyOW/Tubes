@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btLogin = (Button) findViewById(R.id.btnLogin);
+        btLogin = findViewById(R.id.btnLogin);
         btDaftar = findViewById(R.id.btnDaftarLogin);
 
         btLogin.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), DaftarActivity.class);
+                startActivity(i);
             }
         });
 
