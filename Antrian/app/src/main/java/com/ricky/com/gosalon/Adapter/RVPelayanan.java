@@ -8,30 +8,33 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ricky.com.gosalon.Model.JenisPelayanan;
 import com.ricky.com.gosalon.Model.Salon;
 import com.ricky.com.gosalon.R;
 
 import java.util.ArrayList;
 
-public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder> {
+public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
 
-    ArrayList<Salon> salon;
+    ArrayList<JenisPelayanan> layanan;
 
-    public RVAdapterHome(ArrayList<Salon> input){
-        salon=input;
+    public RVPelayanan(ArrayList<JenisPelayanan> input){
+        layanan=input;
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         // di tutorial ini kita hanya menggunakan data String untuk tiapitem
-        public TextView tvNama;
-        public ImageView ivHome;
+        public TextView tvNama,tvHarga,tvStatus;
+        public ImageView ivLayanan;
 
         public ViewHolder(View v) {
             super(v);
-            tvNama = (TextView) v.findViewById(R.id.txtNama);
-            ivHome =(ImageView) v.findViewById(R.id.imgHome);
+            tvNama = (TextView) v.findViewById(R.id.txtNamaLayanan);
+            tvHarga = v.findViewById(R.id.txtHarga);
+            tvStatus = v.findViewById(R.id.txtStatus);
+            ivLayanan =(ImageView) v.findViewById(R.id.imgLayanan);
         }
     }
 
@@ -40,17 +43,20 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
 
         // membuat view baru
         View v =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layanan,
+                        parent, false);
         // mengeset ukuran view, margin, padding, dan parameter kelas_card lainnya
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Salon k = salon.get(position);
+    public void onBindViewHolder(RVPelayanan.ViewHolder holder, int position) {
+        JenisPelayanan k = layanan.get(position);
         holder.tvNama.setText(k.getNama());
-        holder.ivHome.setImageResource(k.getGambar());
+        holder.tvHarga.setText(k.getHarga());
+        holder.tvStatus.setText(k.getStatus());
+        holder.ivLayanan.setImageResource(k.getGambar());
 
 
     }
@@ -58,6 +64,6 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
     @Override
     public int getItemCount() {
         // menghitung ukuran dataset / jumlah data yang ditampilkan di RecyclerView
-        return salon.size();
+        return layanan.size();
     }
 }

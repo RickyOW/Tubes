@@ -1,10 +1,10 @@
 package com.ricky.com.gosalon.Model;
 
-public class JenisSalon {
+public class Salon {
     private String nama;
     int gambar;
 
-    public JenisSalon(String nama, int gambar){
+    public Salon(String nama, int gambar){
         this.nama = nama;
         this.gambar = gambar;
     }
