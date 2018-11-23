@@ -1,4 +1,4 @@
-package com.ricky.com.antrian;
+package com.ricky.com.gosalon.Adapter;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -8,13 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ricky.com.gosalon.Model.JenisSalon;
+import com.ricky.com.gosalon.R;
+
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder> {
 
     ArrayList<JenisSalon> show;
 
-    public RecyclerViewAdapter (ArrayList<JenisSalon> input){
+    public RVAdapterHome(ArrayList<JenisSalon> input){
         show=input;
     }
 
@@ -23,12 +26,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         // di tutorial ini kita hanya menggunakan data String untuk tiapitem
         public TextView tvNama;
-        public ImageView img;
+        public ImageView ivHome;
 
         public ViewHolder(View v) {
             super(v);
-            tvNama = (TextView) v.findViewById(R.id.txNama);
-            img =(ImageView) v.findViewById(R.id.imgHome);
+            tvNama = (TextView) v.findViewById(R.id.txtNama);
+            ivHome =(ImageView) v.findViewById(R.id.imgHome);
         }
     }
 
@@ -48,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         JenisSalon k = show.get(position);
         holder.tvNama.setText(k.getNama());
-        holder.img.setImageResource(k.getGambar());
+        holder.ivHome.setImageResource(k.getGambar());
 
 
     }

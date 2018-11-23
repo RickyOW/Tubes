@@ -1,4 +1,4 @@
-package com.ricky.com.antrian;
+package com.ricky.com.gosalon;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

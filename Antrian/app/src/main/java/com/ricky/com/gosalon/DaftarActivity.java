@@ -1,9 +1,9 @@
-package com.ricky.com.antrian;
+package com.ricky.com.gosalon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Daftar extends AppCompatActivity {
+public class DaftarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.ricky.com.antrian;
+package com.ricky.com.gosalon;
 
 import org.junit.Test;
 

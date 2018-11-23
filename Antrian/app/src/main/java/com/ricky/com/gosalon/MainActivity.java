@@ -1,9 +1,12 @@
-package com.ricky.com.antrian;
+package com.ricky.com.gosalon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.ricky.com.gosalon.Adapter.RVAdapterHome;
+import com.ricky.com.gosalon.Model.JenisSalon;
 
 import java.util.ArrayList;
 
@@ -22,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         rvView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         rvView.setLayoutManager(layoutManager);
-        adapter = new RecyclerViewAdapter(dataSet);
+        adapter = new RVAdapterHome(dataSet);
         rvView.setAdapter(adapter);
 
 

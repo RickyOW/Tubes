@@ -4,26 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Daftar">
+    tools:context="com.ricky.com.gosalon.DaftarActivity">
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editDaftarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="67dp"
+        android:layout_alignStart="@+id/editDaftarPass"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:inputType="text" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editDaftarPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText3"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="184dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="181dp"
         android:ems="10"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnDaftarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editDaftarUser"
+        android:layout_marginBottom="205dp"
+        android:text="Daftar" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editDaftarUser"
+        android:layout_alignTop="@+id/btnDaftarLogin"
+        android:text="Cancel" />
 </RelativeLayout>
