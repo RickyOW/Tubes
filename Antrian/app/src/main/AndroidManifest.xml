@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_sallon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ricky.com.gosalon.LoginActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name="com.ricky.com.gosalon.DaftarActivity"></activity>
+        <activity android:name=".DaftarActivity" />
         <activity android:name=".LayananActivity" />
+        <activity android:name=".geray"></activity>
     </application>
 
 </manifest>
