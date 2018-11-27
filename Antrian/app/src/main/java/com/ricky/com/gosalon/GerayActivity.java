@@ -23,7 +23,14 @@ public class GerayActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        btMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent i = new Intent(getApplicationContext(),);
+//                startActivity(i);
+            }
+        });
 
-        
+
     }
 }
