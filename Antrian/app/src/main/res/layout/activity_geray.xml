@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ricky.com.gosalon.geray">
+    tools:context="com.ricky.com.gosalon.GerayActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,18 +16,18 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPesan"
         android:layout_width="116dp"
         android:layout_height="38dp"
         android:layout_centerInParent="true"
         android:text="Pesan" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnMap"
         android:layout_width="118dp"
         android:layout_height="35dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button"
+        android:layout_alignStart="@+id/btnPesan"
         android:layout_marginBottom="187dp"
         android:text="Map" />
 </RelativeLayout>

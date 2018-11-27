@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int posi) {
                 Salon s = dataSet.get(posi);
-                Intent i = new Intent(getApplicationContext(),LayananActivity.class);
+                Intent i = new Intent(getApplicationContext(),GerayActivity.class);
                 startActivity(i);
 
             }

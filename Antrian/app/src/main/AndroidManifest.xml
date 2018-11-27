@@ -19,7 +19,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".DaftarActivity" />
         <activity android:name=".LayananActivity" />
-        <activity android:name=".geray"></activity>
+        <activity android:name=".GerayActivity"></activity>
     </application>
 
 </manifest>
