@@ -26,8 +26,8 @@ public class GerayActivity extends AppCompatActivity {
         btMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i = new Intent(getApplicationContext(),);
-//                startActivity(i);
+                Intent i = new Intent(getApplicationContext(),MapActivity.class);
+                startActivity(i);
             }
         });
 

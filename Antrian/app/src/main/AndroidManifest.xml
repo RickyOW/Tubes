@@ -20,6 +20,7 @@
         <activity android:name=".DaftarActivity" />
         <activity android:name=".LayananActivity" />
         <activity android:name=".GerayActivity"></activity>
+        <activity android:name=".MapActivity" />
     </application>
 
 </manifest>
