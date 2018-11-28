@@ -1,11 +1,14 @@
 package com.ricky.com.gosalon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
 import com.ricky.com.gosalon.Model.JenisPelayanan;
@@ -18,14 +21,16 @@ public class LayananActivity extends AppCompatActivity {
     private ArrayList<JenisPelayanan> dataSetLayanan;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapterLayanan;
+    Button btGetLayanan;
 
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layanan);
         dataSetLayanan = new ArrayList<JenisPelayanan>();
-
+        btGetLayanan = findViewById(R.id.btnGetLayanan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyLayanan);
+
         rvLayanan.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);;
 
@@ -33,6 +38,14 @@ public class LayananActivity extends AppCompatActivity {
         adapterLayanan = new RVPelayanan(dataSetLayanan);
         rvLayanan.setAdapter(adapterLayanan);
         initDataset();
+
+        btGetLayanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), DetailLayananActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 
