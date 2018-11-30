@@ -30,7 +30,7 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
 
         public ViewHolder(View v) {
             super(v);
-            tvNama = (TextView) v.findViewById(R.id.txtNama);
+            tvNama = (TextView) v.findViewById(R.id.txtTempat);
             ivHome =(ImageView) v.findViewById(R.id.imgHome);
         }
     }
