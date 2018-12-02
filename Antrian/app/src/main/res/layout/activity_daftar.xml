@@ -7,40 +7,135 @@
     tools:context="com.ricky.com.gosalon.DaftarActivity">
 
     <EditText
-        android:id="@+id/editDaftarUser"
-        android:layout_width="wrap_content"
+        android:id="@+id/editDaftarUsername"
+        android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editDaftarPass"
-        android:layout_marginTop="80dp"
+        android:layout_alignStart="@+id/btnTmbhCust"
+        android:layout_marginTop="185dp"
         android:ems="10"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/editDaftarPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="64dp"
-        android:layout_marginTop="181dp"
-        android:ems="10"
-        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnDaftarLogin"
+        android:id="@+id/btnTmbhCust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editDaftarUser"
-        android:layout_marginBottom="205dp"
+        android:layout_centerHorizontal="true"
         android:text="Daftar" />
 
     <Button
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editDaftarUser"
-        android:layout_alignTop="@+id/btnDaftarLogin"
+        android:layout_alignEnd="@+id/editDaftarUsername"
+        android:layout_alignTop="@+id/btnTmbhCust"
         android:text="Cancel" />
+
+    <EditText
+        android:id="@+id/editDaftarAlamat"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editDaftarUsername"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editJenisKelamin"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editDaftarUsername"
+        android:layout_below="@+id/editDaftarAlamat"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editDaftarPass"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editDaftarUsername"
+        android:layout_below="@+id/editJenisKelamin"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/editUlangiPass"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/editDaftarUsername"-->
+        <!--android:layout_marginBottom="62dp"-->
+        <!--android:ems="10"-->
+        <!--android:inputType="textPassword" />-->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editDaftarUsername"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="34dp"
+        android:text="Username" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editDaftarAlamat"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Alamat" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editJenisKelamin"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Jenis Kelamin" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editDaftarPass"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Password" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView14"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBaseline="@+id/editUlangiPass"-->
+        <!--android:layout_alignStart="@+id/textView9"-->
+        <!--android:text="Ualngi Password" />-->
+
+    <ImageView
+        android:id="@+id/imgDaftar"
+        android:layout_width="136dp"
+        android:layout_height="113dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_user" />
+
+    <Button
+        android:id="@+id/btnTmbhImgCust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editDaftarUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-177dp"
+        android:text="Ambil Gambal" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginBottom="106dp"
+        android:text="TextView" />
+
 </RelativeLayout>
