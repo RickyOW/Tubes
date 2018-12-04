@@ -73,15 +73,14 @@ public class AddDataCustomer extends AppCompatActivity {
                 RequestBody reqPass= MultipartBody.create(MediaType.parse("multipart/form-data"),
                         (edtPassword.getText().toString().isEmpty()==true)?"":edtPassword.getText().toString());
                 RequestBody reqAction = MultipartBody.create(MediaType.parse("multipart/form-data"), "post");
-                Call<ResultCustomer> mPembeliCall = mApiInterface.postCustomer(body, reqNama, reqAlamat, reqJnsKel, reqPass, reqAction );
+                Call<ResultCustomer> mCustomerCall = mApiInterface.postCustomer(body, reqNama, reqAlamat, reqJnsKel, reqPass, reqAction );
 
-                mPembeliCall.enqueue(new Callback<ResultCustomer>() {
+                mCustomerCall.enqueue(new Callback<ResultCustomer>() {
                     @Override
                     public void onResponse(Call<ResultCustomer> call, Response<ResultCustomer> response) {
 //                     Log.d("Insert Retrofit",response.body().getStatus());
                         if (response.body().getStatus().equals("failed")){
-                            tvAddMessage.setText("Retrofit Update \n Status = "+response.body().getStatus()
-                                    +"\n"+ "Message ="+response.body().getMessage()+"\n");
+                            tvAddMessage.setText("Retrofit Update1 \n Status = "+response.body().getStatus() +"\n"+ "Message ="+response.body().getMessage()+"\n");
                         }else{
                             String detail = "\n"+
                                     "nama = "+response.body().getResult().get(0).getNama()
@@ -101,13 +100,6 @@ public class AddDataCustomer extends AppCompatActivity {
                 });
             }
         });
-//        btAddBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(mContext, GetPembeliActivity.class);
-//                startActivity(intent);
-//            }
-//        });
         btAddPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

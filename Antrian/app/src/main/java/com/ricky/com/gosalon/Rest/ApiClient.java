@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by alhamdulillah on 10/23/16.
  */
 public class ApiClient {
-    public static final String BASE_URL = "http://192.168.1.13/rest_server_gosalon/index.php/";
+    public static final String BASE_URL = "http://192.168.88.188/rest_server_gosalon/index.php/";
     //public static final String BASE_upload = "http://192.168.1.4/rest_server_gosalon/application/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {

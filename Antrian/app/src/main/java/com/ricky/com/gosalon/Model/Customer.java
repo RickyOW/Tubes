@@ -6,8 +6,8 @@ import com.google.gson.annotations.SerializedName;
  * Created by alhamdulillah on 11/2/16.
  */
 public class Customer {
-    @SerializedName("id_cust")
-    private String idCust;
+//    @SerializedName("id_cust")
+//    private String idCust;
 
     @SerializedName("nama_cust")
     private String nama;
@@ -28,6 +28,7 @@ public class Customer {
 
     public Customer() {}
 
+
     public Customer(String nama, String alamat, String photo, String sex, String password, String action) {
         //this.idCust = idCust;
         this.nama = nama;
@@ -37,12 +38,12 @@ public class Customer {
         this.pass = password;
         this.action = action;
     }
-    public String getIdCust() {
-        return idCust;
-    }
-    public void setIdCust(String idCust) {
-        this.idCust = idCust;
-    }
+//    public String getIdCust() {
+//        return idCust;
+//    }
+//    public void setIdCust(String idCust) {
+//        this.idCust = idCust;
+//    }
     public String getNama() {
         return nama;
     }
