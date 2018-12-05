@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ricky.com.gosalon.DaftarActivity">
+
+    <EditText
+        android:id="@+id/editCustDaftarUsername"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnCustTmbhDaftar"
+        android:layout_marginTop="185dp"
+        android:ems="10"
+        android:inputType="text" />
+
+
+    <Button
+        android:id="@+id/btnCustTmbhDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Daftar" />
+
+    <Button
+        android:id="@+id/btnCustCancelDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editCustDaftarUsername"
+        android:layout_alignTop="@+id/btnCustTmbhDaftar"
+        android:text="Cancel" />
+
+    <EditText
+        android:id="@+id/editCustDaftarAlamat"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editCustDaftarUsername"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editCustJenisKelamin"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editCustDaftarUsername"
+        android:layout_below="@+id/editCustDaftarAlamat"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editCustDaftarPass"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editCustDaftarUsername"
+        android:layout_below="@+id/editCustJenisKelamin"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/editUlangiPass"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/editDaftarUsername"-->
+        <!--android:layout_marginBottom="62dp"-->
+        <!--android:ems="10"-->
+        <!--android:inputType="textPassword" />-->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editCustDaftarUsername"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="34dp"
+        android:text="Username" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editCustDaftarAlamat"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Alamat" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editCustJenisKelamin"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Jenis Kelamin" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editCustDaftarPass"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Password" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView14"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBaseline="@+id/editUlangiPass"-->
+        <!--android:layout_alignStart="@+id/textView9"-->
+        <!--android:text="Ualngi Password" />-->
+
+    <ImageView
+        android:id="@+id/ImgCustDaftar"
+        android:layout_width="136dp"
+        android:layout_height="113dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_user" />
+
+    <Button
+        android:id="@+id/btnCustTmbhImgDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editCustDaftarUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-177dp"
+        android:text="Ambil Gambal" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginBottom="106dp"
+        android:text="TextView" />
+
+</RelativeLayout>

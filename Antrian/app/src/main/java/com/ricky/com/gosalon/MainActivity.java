@@ -10,6 +10,7 @@ import android.view.View;
 import com.ricky.com.gosalon.Adapter.ClickListener;
 import com.ricky.com.gosalon.Adapter.RVAdapterHome;
 import com.ricky.com.gosalon.Adapter.RecyclerTouchListener;
+import com.ricky.com.gosalon.Customer.CustomerGetSalonActivity;
 import com.ricky.com.gosalon.Model.Salon;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_customer_home);
         dataSet = new ArrayList<Salon>();
         initDataset();
         rvView = (RecyclerView)findViewById(R.id.recyHome);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int posi) {
                 Salon s = dataSet.get(posi);
-                Intent i = new Intent(getApplicationContext(),GerayActivity.class);
+                Intent i = new Intent(getApplicationContext(),CustomerGetSalonActivity.class);
                 startActivity(i);
 
             }
