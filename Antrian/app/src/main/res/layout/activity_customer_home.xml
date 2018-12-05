@@ -8,7 +8,7 @@
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyHome"
+        android:id="@+id/recyCustHome"
         android:layout_width="match_parent"
         android:layout_height="450dp"
         android:layout_alignParentBottom="true"

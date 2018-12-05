@@ -1,8 +1,7 @@
-package com.ricky.com.gosalon;
+package com.ricky.com.gosalon.Customer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,11 +11,12 @@ import android.widget.Button;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
 import com.ricky.com.gosalon.Model.JenisPelayanan;
+import com.ricky.com.gosalon.R;
 
 
 import java.util.ArrayList;
 
-public class LayananActivity extends AppCompatActivity {
+public class CustomerLayananActivity extends AppCompatActivity {
     private RecyclerView rvLayanan;
     private ArrayList<JenisPelayanan> dataSetLayanan;
     private RecyclerView.LayoutManager layoutManager;
@@ -26,7 +26,7 @@ public class LayananActivity extends AppCompatActivity {
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layanan);
+        setContentView(R.layout.activity_customer_layanan);
         dataSetLayanan = new ArrayList<JenisPelayanan>();
         btGetLayanan = findViewById(R.id.btnGetLayanan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyLayanan);
@@ -42,7 +42,7 @@ public class LayananActivity extends AppCompatActivity {
         btGetLayanan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), DetailLayananActivity.class);
+                Intent i = new Intent(getApplicationContext(), CustomerDetailLayananActivity.class);
                 startActivity(i);
             }
         });

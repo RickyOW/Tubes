@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ricky.com.gosalon.GerayActivity">
+    tools:context="com.ricky.com.gosalon.Customer.CustomerGetSalonActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgCustGetsalon"
         android:layout_width="160dp"
         android:layout_height="173dp"
         android:layout_alignParentTop="true"
@@ -16,18 +16,18 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <Button
-        android:id="@+id/btnPesan"
+        android:id="@+id/btnCustPesan"
         android:layout_width="116dp"
         android:layout_height="38dp"
         android:layout_centerInParent="true"
         android:text="Pesan" />
 
     <Button
-        android:id="@+id/btnMap"
+        android:id="@+id/btnCustMap"
         android:layout_width="118dp"
         android:layout_height="35dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btnPesan"
+        android:layout_alignStart="@+id/btnCustPesan"
         android:layout_marginBottom="187dp"
         android:text="Map" />
 </RelativeLayout>

@@ -16,7 +16,7 @@
         android:text="Nama yang di pesan" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ImgCustGetlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView10"
@@ -62,7 +62,7 @@
 
 
     <TextView
-        android:id="@+id/txtAntrian"
+        android:id="@+id/txtCustAntrianGetlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView13"
@@ -70,7 +70,7 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/txtAlamat"
+        android:id="@+id/txtCustAlamatGetlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -78,7 +78,7 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/txtNama"
+        android:id="@+id/txtCustNamaGetlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView11"
@@ -86,10 +86,10 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/txtTempat"
+        android:id="@+id/txtCustTempatGetlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtAlamat"
+        android:layout_alignEnd="@+id/txtCustAlamatGetlayanan"
         android:layout_alignTop="@+id/textView14"
         android:text="TextView" />
 

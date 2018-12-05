@@ -8,11 +8,11 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LAyanan"
+        android:text="Layanan"
         android:textSize="24sp" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyLayanan"
+        android:id="@+id/recyCustLayanan"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

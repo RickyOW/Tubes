@@ -29,7 +29,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddDataCustomer extends AppCompatActivity {
+public class CustomerAddData extends AppCompatActivity {
     Context mContext;
     ImageView mImageView;
     Button btAddPhoto, btAddBack, btAddData;
@@ -40,15 +40,15 @@ public class AddDataCustomer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daftar);
+        setContentView(R.layout.activity_customer_daftar);
         mContext = getApplicationContext();
         mImageView = (ImageView) findViewById(R.id.imgDaftar);
         btAddPhoto = (Button) findViewById(R.id.btnTmbhImgCust);
-        edtPassword = (EditText) findViewById(R.id.editDaftarPass);
-        edtAddNamaCustomer = (EditText) findViewById(R.id.editDaftarUsername);
-        edtAddAlamatCustomer = (EditText) findViewById(R.id.editDaftarAlamat);
-        edtAddJnsKel = (EditText) findViewById(R.id.editJenisKelamin);
-        btAddData = (Button) findViewById(R.id.btnTmbhCust);
+        edtPassword = (EditText) findViewById(R.id.editCustDaftarPass);
+        edtAddNamaCustomer = (EditText) findViewById(R.id.editCustDaftarUsername);
+        edtAddAlamatCustomer = (EditText) findViewById(R.id.editCustDaftarAlamat);
+        edtAddJnsKel = (EditText) findViewById(R.id.editCustJenisKelamin);
+        btAddData = (Button) findViewById(R.id.btnCustTmbhDaftar);
         //btAddBack = (Button) findViewById(R.id.btAddBack);
         tvAddMessage = (TextView) findViewById(R.id.txtMessage);
         btAddData.setOnClickListener(new View.OnClickListener() {

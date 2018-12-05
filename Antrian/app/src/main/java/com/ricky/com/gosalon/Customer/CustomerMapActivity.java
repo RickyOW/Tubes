@@ -1,14 +1,16 @@
-package com.ricky.com.gosalon;
+package com.ricky.com.gosalon.Customer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class MapActivity extends AppCompatActivity{
+import com.ricky.com.gosalon.R;
+
+public class CustomerMapActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_customer_map);
         
     }
 }
