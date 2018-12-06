@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_home);
         dataSet = new ArrayList<Salon>();
         initDataset();
-        rvView = (RecyclerView)findViewById(R.id.recyHome);
+        rvView = (RecyclerView)findViewById(R.id.recyCustHome);
         rvView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         rvView.setLayoutManager(layoutManager);

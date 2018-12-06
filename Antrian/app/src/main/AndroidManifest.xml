@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ricky.com.gosalon">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,10 +22,12 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Customer.CustomerLayananActivity" />
-        <activity android:name=".Customer.CustomerGetSalonActivity"></activity>
+        <activity android:name=".Customer.CustomerGetSalonActivity" />
         <activity android:name=".Customer.CustomerMapActivity" />
-        <activity android:name=".Customer.CustomerAddData"/>
+        <activity android:name=".Customer.CustomerAddData" />
         <activity android:name=".Customer.CustomerDetailLayananActivity" />
+        <activity android:name=".Admin.AdminHomeActivity" />
+        <activity android:name=".AdminDetailCustomerActivity"></activity>
     </application>
 
 </manifest>

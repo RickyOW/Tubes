@@ -42,8 +42,8 @@ public class CustomerAddData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_daftar);
         mContext = getApplicationContext();
-        mImageView = (ImageView) findViewById(R.id.imgDaftar);
-        btAddPhoto = (Button) findViewById(R.id.btnTmbhImgCust);
+        mImageView = (ImageView) findViewById(R.id.ImgCustDaftar);
+        btAddPhoto = (Button) findViewById(R.id.btnCustTmbhDaftar);
         edtPassword = (EditText) findViewById(R.id.editCustDaftarPass);
         edtAddNamaCustomer = (EditText) findViewById(R.id.editCustDaftarUsername);
         edtAddAlamatCustomer = (EditText) findViewById(R.id.editCustDaftarAlamat);

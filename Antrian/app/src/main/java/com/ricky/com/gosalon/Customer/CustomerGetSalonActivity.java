@@ -16,7 +16,7 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_getsalon);
         btPesan = findViewById(R.id.btnCustPesan);
-        btMap = findViewById(R.id.btnMap);
+        btMap = findViewById(R.id.btnCustMap);
 
         btPesan.setOnClickListener(new View.OnClickListener() {
             @Override

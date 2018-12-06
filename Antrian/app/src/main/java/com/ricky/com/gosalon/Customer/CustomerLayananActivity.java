@@ -29,7 +29,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_layanan);
         dataSetLayanan = new ArrayList<JenisPelayanan>();
         btGetLayanan = findViewById(R.id.btnGetLayanan);
-        rvLayanan = (RecyclerView) findViewById(R.id.recyLayanan);
+        rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
 
         rvLayanan.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);;
