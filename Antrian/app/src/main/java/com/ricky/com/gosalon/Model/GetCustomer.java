@@ -24,6 +24,9 @@ public class GetCustomer {
     @SerializedName("password")
     private String pass;
 
+    @SerializedName("level")
+    private String level;
+
     private String action;
 
     public GetCustomer() {}
@@ -37,6 +40,7 @@ public class GetCustomer {
         this.photo = photo;
         this.pass = password;
         this.action = action;
+        this.level= level;
     }
 //    public String getIdCust() {
 //        return idCust;
@@ -85,5 +89,13 @@ public class GetCustomer {
     }
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }

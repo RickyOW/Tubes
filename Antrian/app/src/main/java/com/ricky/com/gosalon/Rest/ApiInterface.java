@@ -1,10 +1,13 @@
 package com.ricky.com.gosalon.Rest;
 
+import com.ricky.com.gosalon.Model.PostPutDelCustomer;
 import com.ricky.com.gosalon.Model.ResultCustomer;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -39,5 +42,12 @@ public interface ApiInterface {
     @POST("customer")
     Call<ResultCustomer> deleteCustomer(@Part("id_cust") RequestBody idCust,
                                         @Part("action") RequestBody action);
+
+    // Login
+
+    @FormUrlEncoded
+    @POST("Login")
+    Call<PostPutDelCustomer> getLogin(@Field("nama_cust") String nama_cust,
+                                      @Field("password") String password);
 
 }
