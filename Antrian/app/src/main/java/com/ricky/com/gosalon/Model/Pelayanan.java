@@ -1,13 +1,13 @@
 package com.ricky.com.gosalon.Model;
 
-public class JenisPelayanan {
+public class Pelayanan {
     private String nama;
     private int gambar;
     private String harga;
     private String status;
 
 
-    public JenisPelayanan(String nama, String harga, String status, int gambar){
+    public Pelayanan(String nama, String harga, String status, int gambar){
         this.nama = nama;
         this.harga = harga;
         this.status = status;

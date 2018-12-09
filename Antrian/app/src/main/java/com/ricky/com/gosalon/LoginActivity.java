@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ricky.com.gosalon.Customer.CustomerAddData;
+import com.ricky.com.gosalon.Customer.CustomerMainActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btLogin,btDaftar;
@@ -20,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), CustomerMainActivity.class);
                 startActivity(i);
             }
         });

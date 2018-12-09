@@ -16,27 +16,27 @@ import retrofit2.http.Part;
 public interface ApiInterface {
 
     /************************************/
-    @GET("customer/user")
+    @GET("customer")
     Call<ResultCustomer> getCustomer();
 
     @Multipart
-    @POST("customer/user")
+    @POST("customer")
     Call<ResultCustomer> postCustomer(@Part MultipartBody.Part file,
                                       @Part("nama_cust") RequestBody nama,
                                       @Part("alamat") RequestBody alamat,
-                                      @Part("sex") RequestBody sex,
+                                      @Part("jenis_kelamin") RequestBody jenis_kelamin,
                                       @Part("password") RequestBody password,
                                       @Part("action") RequestBody action);
     @Multipart
-    @POST("customer/user")
+    @POST("customer")
     Call<ResultCustomer> putCustomer(@Part MultipartBody.Part file,
                                      @Part("nama_cust") RequestBody nama,
                                      @Part("alamat") RequestBody alamat,
-                                     @Part("sex") RequestBody sex,
+                                     @Part("jenis_kelamin") RequestBody jenis_kelamin,
                                      @Part("password") RequestBody password,
                                      @Part("action") RequestBody action);
     @Multipart
-    @POST("customer/user")
+    @POST("customer")
     Call<ResultCustomer> deleteCustomer(@Part("id_cust") RequestBody idCust,
                                         @Part("action") RequestBody action);
 

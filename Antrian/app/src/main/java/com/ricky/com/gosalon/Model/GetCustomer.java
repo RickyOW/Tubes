@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by alhamdulillah on 11/2/16.
  */
-public class Customer {
+public class GetCustomer {
 //    @SerializedName("id_cust")
 //    private String idCust;
 
@@ -15,8 +15,8 @@ public class Customer {
     @SerializedName("alamat")
     private String alamat;
 
-    @SerializedName("sex")
-    private String sex;
+    @SerializedName("jenis_kelamin")
+    private String jenis_kelamin;
 
     @SerializedName("photo")
     private String photo;
@@ -26,14 +26,14 @@ public class Customer {
 
     private String action;
 
-    public Customer() {}
+    public GetCustomer() {}
 
 
-    public Customer(String nama, String alamat, String photo, String sex, String password, String action) {
+    public GetCustomer(String nama, String alamat, String photo, String jenis_kelamin, String password, String action) {
         //this.idCust = idCust;
         this.nama = nama;
         this.alamat = alamat;
-        this.sex = sex;
+        this.jenis_kelamin = jenis_kelamin;
         this.photo = photo;
         this.pass = password;
         this.action = action;
@@ -56,12 +56,15 @@ public class Customer {
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
-    public String getSex() {
-        return sex;
+
+    public String getJenis_kelamin() {
+        return jenis_kelamin;
     }
-    public void setSex(String sex) {
-        this.sex = sex;
+
+    public void setJenis_kelamin(String jenis_kelamin) {
+        this.jenis_kelamin = jenis_kelamin;
     }
+
     public String getPhoto() {
         return photo;
     }

@@ -13,7 +13,7 @@ public class  ResultCustomer {
     @SerializedName("status")
     private String status;
     @SerializedName("result")
-    private List<Customer> result = new ArrayList<Customer>();
+    private List<GetCustomer> result = new ArrayList<GetCustomer>();
     @SerializedName("message")
     private String message;
 
@@ -25,10 +25,10 @@ public class  ResultCustomer {
     public void setStatus(String status) {
         this.status = status;
     }
-    public List<Customer> getResult() {
+    public List<GetCustomer> getResult() {
         return result;
     }
-    public void setResult(List<Customer> result) {
+    public void setResult(List<GetCustomer> result) {
         this.result = result;
     }
     public String getMessage() {

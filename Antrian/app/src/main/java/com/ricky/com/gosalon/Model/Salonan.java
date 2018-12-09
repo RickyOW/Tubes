@@ -1,10 +1,10 @@
 package com.ricky.com.gosalon.Model;
 
-public class Salon {
+public class Salonan {
     private String nama;
     int gambar;
 
-    public Salon(String nama, int gambar){
+    public Salonan(String nama, int gambar){
         this.nama = nama;
         this.gambar = gambar;
     }
@@ -15,7 +15,5 @@ public class Salon {
     public int getGambar() {
         return gambar;
     }
-
-
 
 }

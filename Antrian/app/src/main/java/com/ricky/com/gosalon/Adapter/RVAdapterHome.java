@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ricky.com.gosalon.Model.Salon;
+import com.ricky.com.gosalon.Model.Salonan;
 import com.ricky.com.gosalon.R;
 
 import java.util.ArrayList;
 
 public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder> {
 
-    ArrayList<Salon> salon;
+    ArrayList<Salonan> salonan;
 
-    public RVAdapterHome(ArrayList<Salon> input){
-        salon=input;
+    public RVAdapterHome(ArrayList<Salonan> input){
+        salonan =input;
     }
 
 
@@ -48,7 +48,7 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Salon k = salon.get(position);
+        Salonan k = salonan.get(position);
         holder.tvNama.setText(k.getNama());
         holder.ivHome.setImageResource(k.getGambar());
 
@@ -58,6 +58,6 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
     @Override
     public int getItemCount() {
         // menghitung ukuran dataset / jumlah data yang ditampilkan di RecyclerView
-        return salon.size();
+        return salonan.size();
     }
 }

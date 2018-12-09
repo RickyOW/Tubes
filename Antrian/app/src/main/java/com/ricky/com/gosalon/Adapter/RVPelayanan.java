@@ -8,17 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ricky.com.gosalon.Model.JenisPelayanan;
-import com.ricky.com.gosalon.Model.Salon;
+import com.ricky.com.gosalon.Model.Pelayanan;
 import com.ricky.com.gosalon.R;
 
 import java.util.ArrayList;
 
 public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
 
-    ArrayList<JenisPelayanan> layanan;
+    ArrayList<Pelayanan> layanan;
 
-    public RVPelayanan(ArrayList<JenisPelayanan> input){
+    public RVPelayanan(ArrayList<Pelayanan> input){
         layanan=input;
     }
 
@@ -52,7 +51,7 @@ public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RVPelayanan.ViewHolder holder, int position) {
-        JenisPelayanan k = layanan.get(position);
+        Pelayanan k = layanan.get(position);
         holder.tvNama.setText(k.getNama());
         holder.tvHarga.setText(k.getHarga());
         holder.tvStatus.setText(k.getStatus());

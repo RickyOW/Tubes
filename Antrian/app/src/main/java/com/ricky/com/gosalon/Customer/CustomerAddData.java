@@ -85,7 +85,7 @@ public class CustomerAddData extends AppCompatActivity {
                             String detail = "\n"+
                                     "nama = "+response.body().getResult().get(0).getNama()
                                     +"\n"+ "alamat = "+response.body().getResult().get(0).getAlamat()
-                                    +"\n"+ "sex = "+response.body().getResult().get(0).getSex()
+                                    +"\n"+ "sex = "+response.body().getResult().get(0).getJenis_kelamin()
                                     +"\n"+ "photo = "+response.body().getResult().get(0).getPhoto()
                                     +"\n"+ "password = "+response.body().getResult().get(0).getPass()
                                     +"\n";tvAddMessage.setText("Retrofit Update \n Status = "+response.body().getStatus()

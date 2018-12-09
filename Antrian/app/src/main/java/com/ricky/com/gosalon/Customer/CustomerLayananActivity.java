@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
-import com.ricky.com.gosalon.Model.JenisPelayanan;
+import com.ricky.com.gosalon.Model.Pelayanan;
 import com.ricky.com.gosalon.R;
 
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class CustomerLayananActivity extends AppCompatActivity {
     private RecyclerView rvLayanan;
-    private ArrayList<JenisPelayanan> dataSetLayanan;
+    private ArrayList<Pelayanan> dataSetLayanan;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapterLayanan;
     Button btGetLayanan;
@@ -27,7 +27,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_layanan);
-        dataSetLayanan = new ArrayList<JenisPelayanan>();
+        dataSetLayanan = new ArrayList<Pelayanan>();
         btGetLayanan = findViewById(R.id.btnGetLayanan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
 
@@ -52,9 +52,9 @@ public class CustomerLayananActivity extends AppCompatActivity {
     }
 
     public void initDataset(){
-        dataSetLayanan.add(new JenisPelayanan("Cuci Muka","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new JenisPelayanan("Rawat Kuku","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new JenisPelayanan("Rawat Inap","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new JenisPelayanan("Rawat Jalan","10000","On",R.drawable.ic_scis));
+        dataSetLayanan.add(new Pelayanan("Cuci Muka","10000","On",R.drawable.ic_scis));
+        dataSetLayanan.add(new Pelayanan("Rawat Kuku","10000","On",R.drawable.ic_scis));
+        dataSetLayanan.add(new Pelayanan("Rawat Inap","10000","On",R.drawable.ic_scis));
+        dataSetLayanan.add(new Pelayanan("Rawat Jalan","10000","On",R.drawable.ic_scis));
     }
 }

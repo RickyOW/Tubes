@@ -20,14 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Customer.CustomerMainActivity" />
         <activity android:name=".Customer.CustomerLayananActivity" />
         <activity android:name=".Customer.CustomerGetSalonActivity" />
         <activity android:name=".Customer.CustomerMapActivity" />
         <activity android:name=".Customer.CustomerAddData" />
         <activity android:name=".Customer.CustomerDetailLayananActivity" />
         <activity android:name=".Admin.AdminHomeActivity" />
-        <activity android:name=".AdminDetailCustomerActivity"></activity>
+        <activity android:name=".Admin.AdminDetailCustomerActivity"></activity>
     </application>
 
 </manifest>

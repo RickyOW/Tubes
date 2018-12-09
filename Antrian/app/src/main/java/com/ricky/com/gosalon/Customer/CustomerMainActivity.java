@@ -1,4 +1,4 @@
-package com.ricky.com.gosalon;
+package com.ricky.com.gosalon.Customer;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,13 +11,14 @@ import com.ricky.com.gosalon.Adapter.ClickListener;
 import com.ricky.com.gosalon.Adapter.RVAdapterHome;
 import com.ricky.com.gosalon.Adapter.RecyclerTouchListener;
 import com.ricky.com.gosalon.Customer.CustomerGetSalonActivity;
-import com.ricky.com.gosalon.Model.Salon;
+import com.ricky.com.gosalon.Model.Salonan;
+import com.ricky.com.gosalon.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class CustomerMainActivity extends AppCompatActivity {
     private RecyclerView rvView;
-    private ArrayList<Salon> dataSet;
+    private ArrayList<Salonan> dataSet;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_home);
-        dataSet = new ArrayList<Salon>();
+        dataSet = new ArrayList<Salonan>();
         initDataset();
         rvView = (RecyclerView)findViewById(R.id.recyCustHome);
         rvView.setHasFixedSize(true);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         rvView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvView, new ClickListener() {
             @Override
             public void onClick(View view, int posi) {
-                Salon s = dataSet.get(posi);
+                Salonan s = dataSet.get(posi);
                 Intent i = new Intent(getApplicationContext(),CustomerGetSalonActivity.class);
                 startActivity(i);
 
@@ -53,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDataset(){
-        dataSet.add(new Salon("Rawat ",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat2 ",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat3",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat4 ",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat5 ",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat6 ",R.drawable.ic_scis));
-        dataSet.add(new Salon("Rawat7 ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat2 ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat3",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat4 ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat5 ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat6 ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("Rawat7 ",R.drawable.ic_scis));
 
 
     }
