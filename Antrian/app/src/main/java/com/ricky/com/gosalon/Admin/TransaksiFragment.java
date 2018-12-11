@@ -25,7 +25,7 @@ public class TransaksiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_transaksi, container, false);
+        return inflater.inflate(R.layout.fragmenta_admin_transaksi, container, false);
     }
 
 }
