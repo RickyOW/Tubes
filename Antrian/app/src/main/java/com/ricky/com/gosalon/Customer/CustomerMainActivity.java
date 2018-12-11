@@ -54,7 +54,7 @@ public class CustomerMainActivity extends AppCompatActivity {
     }
 
     private void initDataset(){
-        dataSet.add(new Salonan("Rawat ",R.drawable.ic_scis));
+        dataSet.add(new Salonan("",R.drawable.ic_scis));
         dataSet.add(new Salonan("Rawat2 ",R.drawable.ic_scis));
         dataSet.add(new Salonan("Rawat3",R.drawable.ic_scis));
         dataSet.add(new Salonan("Rawat4 ",R.drawable.ic_scis));

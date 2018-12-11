@@ -1,6 +1,6 @@
 package com.ricky.com.gosalon.Rest;
 
-import com.ricky.com.gosalon.Model.PostPutDelCustomer;
+import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
 import com.ricky.com.gosalon.Model.ResultCustomer;
 
 import okhttp3.MultipartBody;

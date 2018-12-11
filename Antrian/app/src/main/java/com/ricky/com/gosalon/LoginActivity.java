@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ricky.com.gosalon.Admin.AdminHomeActivity;
+import com.ricky.com.gosalon.Admin.AdminMainActivity;
 import com.ricky.com.gosalon.Customer.CustomerAddData;
 import com.ricky.com.gosalon.Customer.CustomerMainActivity;
 import com.ricky.com.gosalon.Model.GetCustomer;
-import com.ricky.com.gosalon.Model.PostPutDelCustomer;
+import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
 import com.ricky.com.gosalon.Rest.ApiClient;
 import com.ricky.com.gosalon.Rest.ApiInterface;
 
@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(i);
                             finish();
                         } else {
-                            Intent i =new Intent(getApplicationContext(), AdminHomeActivity.class);
+                            Intent i =new Intent(getApplicationContext(), AdminMainActivity.class);
                             startActivity(i);
                             finish();
 

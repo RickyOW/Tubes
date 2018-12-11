@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_user_admin"
+        android:icon="@drawable/users"
+        android:title="User"/>
+    <item
+        android:id="@+id/nav_transaksi_admin"
+        android:icon="@drawable/transaksi"
+        android:title="transaksi"/>
+    <item
+        android:id="@+id/nav_salon_admin"
+        android:icon="@drawable/salon"
+        android:title="Salon"/>
+</menu>

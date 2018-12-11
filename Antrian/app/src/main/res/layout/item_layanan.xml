@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imgLayanan"
-        android:layout_alignStart="@+id/txtHarga"
+        android:layout_alignStart="@+id/txtStatus"
         android:text="Button"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="105dp" />
