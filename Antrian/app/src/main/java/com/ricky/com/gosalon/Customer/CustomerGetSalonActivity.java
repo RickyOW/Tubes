@@ -28,7 +28,7 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
         btMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),CustomerMapActivity.class);
+                Intent i = new Intent(getApplicationContext(),MapsActivity.class);
                 startActivity(i);
             }
         });
