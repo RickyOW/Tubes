@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.R;
+import com.ricky.com.gosalon.Rest.ApiClient;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,6 +45,7 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
                 LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
         // mengeset ukuran view, margin, padding, dan parameter kelas_card lainnya
         ViewHolder vh = new ViewHolder(v);
+
         return vh;
     }
 
@@ -50,7 +53,7 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         GetSalon k = salonan.get(position);
         holder.tvNama.setText(k.getNama_salon());
-    //    holder.ivHome.setImageResource(k.getPhoto());
+        Picasso.get().load(ApiClient.IMG+salonan.get(position).getPhoto()).into(holder.ivHome);
 
 
     }
