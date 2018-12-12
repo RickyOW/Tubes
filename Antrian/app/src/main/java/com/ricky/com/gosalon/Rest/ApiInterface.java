@@ -1,7 +1,11 @@
 package com.ricky.com.gosalon.Rest;
 
 import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
+import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.Model.ResultCustomer;
+import com.ricky.com.gosalon.Model.ResultSalon;
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -49,5 +53,9 @@ public interface ApiInterface {
     @POST("Login")
     Call<PostPutDelCustomer> getLogin(@Field("nama_cust") String nama_cust,
                                       @Field("password") String password);
+
+    //Salon
+    @GET("Salon")
+    Call<ResultSalon> GetSalon();
 
 }

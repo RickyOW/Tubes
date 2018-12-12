@@ -10,20 +10,15 @@ public class GetSalon {
     @SerializedName("alamat")
     private String alamat;
     @SerializedName("koordinat_x")
-    private  String koorx;
+    private String koorx;
     @SerializedName("koordinat_y")
     private String koory;
+    @SerializedName("photo")
+    private String photo;
+
 
     public GetSalon() {
 
-    }
-
-    public GetSalon(String id_salon, String nama_salon, String alamat, String koorx, String koory) {
-        this.id_salon = id_salon;
-        this.nama_salon = nama_salon;
-        this.alamat = alamat;
-        this.koorx = koorx;
-        this.koory = koory;
     }
 
     public String getId_salon() {
@@ -64,5 +59,13 @@ public class GetSalon {
 
     public void setKoory(String koory) {
         this.koory = koory;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ricky.com.gosalon.Model.Salonan;
+import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder> {
 
-    ArrayList<Salonan> salonan;
+    List<GetSalon> salonan;
 
-    public RVAdapterHome(ArrayList<Salonan> input){
+    public RVAdapterHome(List<GetSalon> input){
         salonan =input;
     }
 
@@ -48,9 +48,9 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Salonan k = salonan.get(position);
-        holder.tvNama.setText(k.getNama());
-        holder.ivHome.setImageResource(k.getGambar());
+        GetSalon k = salonan.get(position);
+        holder.tvNama.setText(k.getNama_salon());
+    //    holder.ivHome.setImageResource(k.getPhoto());
 
 
     }
