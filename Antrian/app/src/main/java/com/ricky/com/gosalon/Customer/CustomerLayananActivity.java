@@ -10,33 +10,38 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
+import com.ricky.com.gosalon.Model.GetLayanan;
 import com.ricky.com.gosalon.Model.Pelayanan;
+import com.ricky.com.gosalon.Model.ResultLayanan;
 import com.ricky.com.gosalon.R;
+import com.ricky.com.gosalon.Rest.ApiClient;
+import com.ricky.com.gosalon.Rest.ApiInterface;
 
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CustomerLayananActivity extends AppCompatActivity {
     private RecyclerView rvLayanan;
-    private ArrayList<Pelayanan> dataSetLayanan;
+    private List<GetLayanan> dataSetLayanan;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapterLayanan;
+    private ApiInterface mApiInterface;
     Button btGetLayanan;
+
+
 
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_layanan);
-        dataSetLayanan = new ArrayList<Pelayanan>();
         btGetLayanan = findViewById(R.id.btnGetLayanan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
 
-        rvLayanan.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);;
-
-        rvLayanan.setLayoutManager(layoutManager);
-        adapterLayanan = new RVPelayanan(dataSetLayanan);
-        rvLayanan.setAdapter(adapterLayanan);
         initDataset();
 
         btGetLayanan.setOnClickListener(new View.OnClickListener() {
@@ -47,14 +52,31 @@ public class CustomerLayananActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     public void initDataset(){
-        dataSetLayanan.add(new Pelayanan("Cuci Muka","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new Pelayanan("Rawat Kuku","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new Pelayanan("Rawat Inap","10000","On",R.drawable.ic_scis));
-        dataSetLayanan.add(new Pelayanan("Rawat Jalan","10000","On",R.drawable.ic_scis));
+
+        mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+        Call<ResultLayanan> getLayanan = mApiInterface.getLayanan();
+        getLayanan.enqueue(new Callback<ResultLayanan>() {
+            @Override
+            public void onResponse(Call<ResultLayanan> call, Response<ResultLayanan> response) {
+                dataSetLayanan = response.body().getResult();
+
+                layoutManager = new LinearLayoutManager(CustomerLayananActivity.this,LinearLayoutManager.VERTICAL,false);;
+                rvLayanan.setLayoutManager(layoutManager);
+                adapterLayanan = new RVPelayanan(dataSetLayanan);
+                rvLayanan.setAdapter(adapterLayanan);
+            }
+
+            @Override
+            public void onFailure(Call<ResultLayanan> call, Throwable t) {
+
+            }
+        });
+
+
     }
+
+
 }
