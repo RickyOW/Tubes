@@ -16,7 +16,7 @@
         android:weightSum="2">
 
         <ImageView
-            android:id="@+id/imgHome"
+            android:id="@+id/imgSalonAdmin"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
@@ -37,7 +37,7 @@
             app:cardMaxElevation="30dp">
 
             <TextView
-                android:id="@+id/txtTempat"
+                android:id="@+id/txtTempatAdmin"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

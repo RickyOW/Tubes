@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class RVSalon extends RecyclerView.Adapter<RVSalon,RVSalon.ViewHolder> {
+public class RVSalon extends RecyclerView.Adapter<RVSalon.ViewHolder> {
     List<GetSalon> salonan;
 
     public RVSalon(List<GetSalon> input){
@@ -30,8 +30,8 @@ public class RVSalon extends RecyclerView.Adapter<RVSalon,RVSalon.ViewHolder> {
 
         public ViewHolder(View v) {
             super(v);
-            tvNama = (TextView) v.findViewById(R.id.txtTempat);
-            ivHome =(ImageView) v.findViewById(R.id.imgHome);
+            tvNama = (TextView) v.findViewById(R.id.txtTempatAdmin);
+            ivHome =(ImageView) v.findViewById(R.id.imgSalonAdmin);
         }
     }
 
@@ -40,15 +40,15 @@ public class RVSalon extends RecyclerView.Adapter<RVSalon,RVSalon.ViewHolder> {
 
         // membuat view baru
         View v =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_admin_salon, parent, false);
         // mengeset ukuran view, margin, padding, dan parameter kelas_card lainnya
-        RVAdapterHome.ViewHolder vh = new RVSalon().ViewHolder(v);
+        RVSalon.ViewHolder vh = new ViewHolder(v);
 
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(RVAdapterHome.ViewHolder holder, int position) {
+    public void onBindViewHolder(RVSalon.ViewHolder holder, int position) {
         GetSalon k = salonan.get(position);
         holder.tvNama.setText(k.getNama_salon());
         Picasso.get().load(ApiClient.IMG+salonan.get(position).getPhoto()).into(holder.ivHome);
