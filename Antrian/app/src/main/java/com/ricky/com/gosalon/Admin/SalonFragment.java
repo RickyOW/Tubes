@@ -3,6 +3,7 @@ package com.ricky.com.gosalon.Admin;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -46,9 +47,9 @@ public class SalonFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_admin_salon, container, false);
 
-        rv = (RecyclerView) view.findViewById(R.id.RvFragmantUser);
+        rv = (RecyclerView) view.findViewById(R.id.fragmen_admin_salon);
         rv.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager = new GridLayoutManager(getContext(),2);
         rv.setLayoutManager(mLayoutManager);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);

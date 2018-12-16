@@ -19,7 +19,8 @@ public class RVAdminSalon extends RecyclerView.Adapter<RVAdminSalon.ViewHolder> 
     List<GetSalon> datasalon;
     private Context mContext;
 
-    public RVAdminSalon(List<GetSalon> input, Context mContext){
+    public RVAdminSalon(List<GetSalon> input, Context context){
+        mContext = context;
         datasalon =input;
     }
 
