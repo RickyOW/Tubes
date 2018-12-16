@@ -9,7 +9,7 @@ public class ResultLayanan {
     @SerializedName("status")
     private String status;
     @SerializedName("result")
-    private List<GetLayanan> result = new ArrayList<GetLayanan>();
+    private List<GetLayanan> result;
     @SerializedName("message")
     private String message;
 

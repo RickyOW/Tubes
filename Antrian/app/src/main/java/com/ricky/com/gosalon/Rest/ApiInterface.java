@@ -3,6 +3,7 @@ package com.ricky.com.gosalon.Rest;
 import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
 import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.Model.ResultCustomer;
+import com.ricky.com.gosalon.Model.ResultLayanan;
 import com.ricky.com.gosalon.Model.ResultSalon;
 
 import java.util.List;
@@ -57,5 +58,8 @@ public interface ApiInterface {
     //Salon
     @GET("Salon")
     Call<ResultSalon> GetSalon();
+
+    @GET("Layanan")
+    Call<ResultLayanan> getLayanan();
 
 }
