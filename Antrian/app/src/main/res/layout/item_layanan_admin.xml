@@ -3,38 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.ricky.com.gosalon.Admin.AdminDetailCustomerActivity">
-
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/imgLayananAdmin"
         android:layout_width="143dp"
         android:layout_height="137dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
         app:srcCompat="@drawable/ic_scis"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <TextView
-        android:id="@+id/textNamaLayanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Jenis Kelamin"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="76dp" />
 
     <TextView
-        android:id="@+id/Nama"
+        android:id="@+id/txtAdminHargaLayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="191dp"
-        android:text="Nama"
+        android:layout_marginTop="29dp"
+        android:text="Harga"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <TextView
+        android:id="@+id/txtAdminNamaLayanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtAdminHargaLayanan"
+        android:layout_alignTop="@+id/imgLayananAdmin"
+        android:text="Nama Layanan"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -42,20 +42,29 @@
         android:id="@+id/txtAdminStatusLayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="218dp"
+        android:layout_centerInParent="true"
         android:text="Status"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="46dp" />
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="170dp"
-        android:text="Kembali" />
+        android:layout_alignBottom="@+id/imgLayananAdmin"
+        android:layout_alignStart="@+id/txtAdminHargaLayanan"
+        android:orientation="horizontal">
+
+        <!--<Button-->
+            <!--android:id="@+id/btnAdminEditLayanan"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/imgLayananAdmin"-->
+            <!--android:layout_alignStart="@+id/txtAdminStatusLayanan"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Edit"-->
+            <!--tools:layout_editor_absoluteX="161dp"-->
+            <!--tools:layout_editor_absoluteY="105dp" />-->
+
+    </LinearLayout>
 
 </RelativeLayout>

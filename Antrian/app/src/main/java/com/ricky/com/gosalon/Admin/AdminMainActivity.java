@@ -40,6 +40,13 @@ public class AdminMainActivity extends AppCompatActivity {
                     fragmentTransaksiTransaction.replace(R.id.fragment_container_admin, transaksiFragment);
                     fragmentTransaksiTransaction.commit();
                     return true;
+                case R.id.nav_layanan_admin:
+                    LayananFragment layananFragment = new LayananFragment();
+                    FragmentTransaction fragmentLayananTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentLayananTransaction.replace(R.id.fragment_container_admin, layananFragment);
+                    fragmentLayananTransaction.commit();
+                    return true;
+
             }
             return false;
         }

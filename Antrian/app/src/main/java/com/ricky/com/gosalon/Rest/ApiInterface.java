@@ -1,12 +1,9 @@
 package com.ricky.com.gosalon.Rest;
 
 import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
-import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.Model.ResultCustomer;
 import com.ricky.com.gosalon.Model.ResultLayanan;
 import com.ricky.com.gosalon.Model.ResultSalon;
-
-import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -59,7 +56,31 @@ public interface ApiInterface {
     @GET("Salon")
     Call<ResultSalon> GetSalon();
 
-    @GET("Layanan")
-    Call<ResultLayanan> getLayanan();
+    //layanan
+    @GET("layanan")
+    Call<ResultLayanan> GetLayanan();
+
+    @Multipart
+    @POST("layanan")
+    Call<ResultLayanan> postLayanan(@Part MultipartBody.Part file,
+                                    @Part("id_salon") RequestBody id_salon,
+                                    @Part("nama_layanan") RequestBody nama,
+                                    @Part("deskripsi") RequestBody deskripsi,
+                                    @Part("harga") RequestBody harga,
+                                    @Part("status") RequestBody status,
+                                    @Part("action") RequestBody action);
+
+    @Multipart
+    @POST("layanan")
+    Call<ResultLayanan> putLayanan(@Part MultipartBody.Part file,
+                                   @Part("id_salon") RequestBody id_salon,
+                                   @Part("nama_layanan") RequestBody nama,
+                                   @Part("deskripsi") RequestBody deskripsi,
+                                   @Part("harga") RequestBody harga,
+                                   @Part("status") RequestBody status);
+    @Multipart
+    @POST("layanan")
+    Call<ResultLayanan> deleteLayanan(@Part("id_layanan") RequestBody idLay,
+                                      @Part("action") RequestBody action);
 
 }

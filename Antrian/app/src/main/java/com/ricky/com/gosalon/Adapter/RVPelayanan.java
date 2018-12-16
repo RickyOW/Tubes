@@ -56,7 +56,7 @@ public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
 
         holder.tvNama.setText(k.getNama());
         holder.tvHarga.setText(k.getHarga());
-        holder.tvStatus.setText(k.getStatus());
+        holder.tvStatus.setText(k.getStatusLay());
 //        holder.ivLayanan.setImageResource(k.getGambar());
 
 

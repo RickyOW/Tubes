@@ -13,4 +13,8 @@
         android:id="@+id/nav_salon_admin"
         android:icon="@drawable/salon"
         android:title="Salon"/>
+    <item
+        android:id="@+id/nav_layanan_admin"
+        android:icon="@drawable/ic_spa_black"
+        android:title="Layanan"/>
 </menu>

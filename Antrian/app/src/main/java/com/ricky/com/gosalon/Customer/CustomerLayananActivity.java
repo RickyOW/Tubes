@@ -39,7 +39,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_layanan);
-        btGetLayanan = findViewById(R.id.btnGetLayanan);
+        btGetLayanan = findViewById(R.id.btnCustPesan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
 
         initDataset();
@@ -57,7 +57,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     public void initDataset(){
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        Call<ResultLayanan> getLayanan = mApiInterface.getLayanan();
+        Call<ResultLayanan> getLayanan = mApiInterface.GetLayanan();
         getLayanan.enqueue(new Callback<ResultLayanan>() {
             @Override
             public void onResponse(Call<ResultLayanan> call, Response<ResultLayanan> response) {

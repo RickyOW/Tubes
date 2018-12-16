@@ -14,7 +14,9 @@ public class GetLayanan {
     @SerializedName("harga")
     private String harga;
     @SerializedName("status")
-    private  String status;
+    private  String statusLay;
+    @SerializedName("photo")
+    private  String photo;
 
     public String getId_layanan() {
         return id_layanan;
@@ -56,11 +58,19 @@ public class GetLayanan {
         this.harga = harga;
     }
 
-    public String getStatus() {
-        return status;
+    public String getStatusLay() {
+        return statusLay;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatusLay(String statusLay) {
+        this.statusLay = statusLay;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
