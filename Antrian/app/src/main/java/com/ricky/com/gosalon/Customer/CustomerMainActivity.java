@@ -51,7 +51,7 @@ public class CustomerMainActivity extends AppCompatActivity {
                 dataSet = response.body().getResult();
 
 
-                adapter = new RVAdapterHome(dataSet);
+                adapter = new RVAdapterHome(dataSet,getApplicationContext());
                 rvView.setAdapter(adapter);
             }
 
@@ -62,19 +62,19 @@ public class CustomerMainActivity extends AppCompatActivity {
         });
 
 
-        rvView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvView, new ClickListener() {
-            @Override
-            public void onClick(View view, int posi) {
-                Intent i = new Intent(getApplicationContext(),CustomerGetSalonActivity.class);
-                startActivity(i);
-
-            }
-
-            @Override
-            public void onLongClick(View view, int posi) {
-
-            }
-        }));
+//        rvView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvView, new ClickListener() {
+//            @Override
+//            public void onClick(View view, int posi) {
+//                Intent i = new Intent(getApplicationContext(),CustomerGetSalonActivity.class);
+//                startActivity(i);
+//
+//            }
+//
+//            @Override
+//            public void onLongClick(View view, int posi) {
+//
+//            }
+//        }));
 
 
     }

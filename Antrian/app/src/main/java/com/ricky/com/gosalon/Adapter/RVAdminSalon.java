@@ -1,6 +1,7 @@
 package com.ricky.com.gosalon.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ricky.com.gosalon.Customer.CustomerGetSalonActivity;
 import com.ricky.com.gosalon.Model.GetSalon;
 import com.ricky.com.gosalon.R;
 import com.ricky.com.gosalon.Rest.ApiClient;
@@ -51,9 +53,19 @@ public class RVAdminSalon extends RecyclerView.Adapter<RVAdminSalon.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        GetSalon k = datasalon.get(position);
+        final GetSalon k = datasalon.get(position);
         holder.tvNama.setText(k.getNama_salon());
         Picasso.get().load(ApiClient.IMG+datasalon.get(position).getPhoto()).into(holder.ivHome);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(mContext,CustomerGetSalonActivity.class);
+                i.putExtra("nama",k.getNama_salon());
+
+                mContext.startActivity(i);
+            }
+        });
 
 
     }

@@ -56,7 +56,9 @@
             android:name=".Customer.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".Admin.Layanan.AdminAddlayananActivity" />
-        <activity android:name=".Admin.Layanan.AdminEditLayanan"></activity>
+        <activity android:name=".Admin.Layanan.AdminEditLayanan">
+
+        </activity>
     </application>
 
 </manifest>
