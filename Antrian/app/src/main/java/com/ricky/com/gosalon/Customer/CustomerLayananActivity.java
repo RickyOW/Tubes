@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
 import com.ricky.com.gosalon.Model.GetLayanan;
@@ -31,7 +32,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapterLayanan;
     private ApiInterface mApiInterface;
-    Button btGetLayanan;
+    TextView btGetLayanan;
 
 
 
@@ -39,18 +40,18 @@ public class CustomerLayananActivity extends AppCompatActivity {
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_layanan);
-        btGetLayanan = findViewById(R.id.btnCustPesan);
+//        btGetLayanan = findViewById(R.id.btnCustPesan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
 
         initDataset();
 
-        btGetLayanan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), CustomerDetailLayananActivity.class);
-                startActivity(i);
-            }
-        });
+//        btGetLayanan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getApplicationContext(), CustomerDetailLayananActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
     }
 
