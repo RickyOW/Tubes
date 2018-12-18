@@ -37,8 +37,9 @@
         android:id="@+id/editCustDaftarAlamat"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/editCustDaftarUsername"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="239dp"
         android:ems="10"
         android:inputType="textMultiLine" />
 

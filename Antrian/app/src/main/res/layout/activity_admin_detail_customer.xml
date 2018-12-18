@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textNamaLayanan"
+        android:id="@+id/txtAdminDtlCusJenKel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -28,7 +28,7 @@
         tools:layout_editor_absoluteY="76dp" />
 
     <TextView
-        android:id="@+id/Nama"
+        android:id="@+id/txtAdminDtlCusNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -39,7 +39,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/txtAdminStatusLayanan"
+        android:id="@+id/txtAdminDtlCusStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
