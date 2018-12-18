@@ -23,16 +23,21 @@
             android:text="Nama : "
             android:textSize="18dp"
             android:textColor="#000"/>
+
         <TextView
             android:id="@+id/txt_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat    :"/>
+            android:text="Alamat  :"
+            android:textAllCaps="false"
+            android:textColor="#000" />
+
         <TextView
             android:id="@+id/txt_jenis_kelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin :"/>
+            android:text="Jenis Kelamin :"
+            android:textColor="#000" />
 
     </LinearLayout>
 

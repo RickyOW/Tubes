@@ -32,7 +32,7 @@
             android:id="@+id/txt_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat : "
+            android:text="Alamat :"
             android:textSize="16dp" />
 
         <TextView
