@@ -73,6 +73,10 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
                 i.putExtra("alamat",k.getAlamat());
                 i.putExtra("Image",k.getPhoto());
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                i.putExtra("x",k.getKoorx());
+                i.putExtra("y",k.getKoory());
+
                 mContext.startActivity(i);
             }
         });

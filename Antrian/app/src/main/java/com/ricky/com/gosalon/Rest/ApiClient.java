@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
     public static final String BASE_URL = "http://192.168.88.18/rest_server_gosalon/index.php/";
     public static final String  IMG = "http://192.168.88.18/rest_server_gosalon/image/";
-    public static final String  IMGLayanan = "http://192.168.1.18/rest_server_gosalon/upload/layanan/";
+    public static final String  IMGLayanan = "http://192.168.88.18/rest_server_gosalon/upload/layanan/";
     //public static final String BASE_upload = "http://192.168.1.4/rest_server_gosalon/application/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
