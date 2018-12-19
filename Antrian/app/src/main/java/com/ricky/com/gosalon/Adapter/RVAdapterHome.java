@@ -71,6 +71,8 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
                 i.putExtra("nama",k.getNama_salon());
                 i.putExtra("alamat",k.getAlamat());
                 i.putExtra("Image",k.getPhoto());
+                i.putExtra("x",k.getKoorx());
+                i.putExtra("y",k.getKoory());
                 mContext.startActivity(i);
             }
         });

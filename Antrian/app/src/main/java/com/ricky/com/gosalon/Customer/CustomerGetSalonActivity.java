@@ -17,6 +17,7 @@ import com.squareup.picasso.Picasso;
 public class CustomerGetSalonActivity extends AppCompatActivity {
     FloatingActionButton btMap;
     TextView btPesan;
+    String x,y;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
         Intent i = getIntent();
         nama.setText(i.getStringExtra("nama"));
         alamat.setText(i.getStringExtra("alamat"));
+        x = i.getStringExtra("x");
+        y = i.getStringExtra("y");
         Picasso.get().load(ApiClient.IMG+i.getStringExtra("Image")).into(photo);
 
 
@@ -46,6 +49,8 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),MapsActivity.class);
+                i.putExtra("x",x);
+                i.putExtra("y",y);
                 startActivity(i);
             }
         });
