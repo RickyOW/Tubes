@@ -68,9 +68,11 @@ public class RVAdapterHome extends RecyclerView.Adapter<RVAdapterHome.ViewHolder
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(mContext,CustomerGetSalonActivity.class);
+                i.putExtra("id",k.getId_salon());
                 i.putExtra("nama",k.getNama_salon());
                 i.putExtra("alamat",k.getAlamat());
                 i.putExtra("Image",k.getPhoto());
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(i);
             }
         });

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ricky.com.gosalon.Adapter.RVPelayanan;
 import com.ricky.com.gosalon.Model.GetLayanan;
@@ -33,7 +34,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapterLayanan;
     private ApiInterface mApiInterface;
     TextView btGetLayanan;
-
+    Intent i;
 
 
     @Override
@@ -42,7 +43,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_layanan);
 //        btGetLayanan = findViewById(R.id.btnCustPesan);
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
-
+        i = getIntent();
         initDataset();
 
 //        btGetLayanan.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +59,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
     public void initDataset(){
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        Call<ResultLayanan> getLayanan = mApiInterface.GetLayanan();
+        Call<ResultLayanan> getLayanan = mApiInterface.detaillayanan(i.getStringExtra("id"));
         getLayanan.enqueue(new Callback<ResultLayanan>() {
             @Override
             public void onResponse(Call<ResultLayanan> call, Response<ResultLayanan> response) {
@@ -72,7 +73,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResultLayanan> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(),"Something Worg "+t.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
 

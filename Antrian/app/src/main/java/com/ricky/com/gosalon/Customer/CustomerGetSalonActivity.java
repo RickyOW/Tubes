@@ -29,16 +29,17 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
         TextView alamat = findViewById(R.id.tvDetailAlamat);
         ImageView photo = findViewById(R.id.imgDetailSalon);
 
-        Intent i = getIntent();
-        nama.setText(i.getStringExtra("nama"));
-        alamat.setText(i.getStringExtra("alamat"));
-        Picasso.get().load(ApiClient.IMG+i.getStringExtra("Image")).into(photo);
+        final Intent in = getIntent();
+        nama.setText(in.getStringExtra("nama"));
+        alamat.setText(in.getStringExtra("alamat"));
+        Picasso.get().load(ApiClient.IMG+in.getStringExtra("Image")).into(photo);
 
 
         btPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), CustomerLayananActivity.class);
+                i.putExtra("id", in.getStringExtra("id"));
                 startActivity(i);
             }
         });

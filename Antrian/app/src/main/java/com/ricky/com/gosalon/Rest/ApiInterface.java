@@ -60,6 +60,10 @@ public interface ApiInterface {
     @GET("layanan")
     Call<ResultLayanan> GetLayanan();
 
+    @FormUrlEncoded
+    @POST("Layanan/detaillayanan")
+    Call<ResultLayanan> detaillayanan(@Field("id") String id);
+
     @Multipart
     @POST("layanan")
     Call<ResultLayanan> postLayanan(@Part MultipartBody.Part file,

@@ -54,15 +54,17 @@ public class RVAdminSalon extends RecyclerView.Adapter<RVAdminSalon.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final GetSalon k = datasalon.get(position);
-        holder.tvNama.setText(k.getNama_salon());
+        holder.tvNama.setText(k.getNama_salon() +" :"+k.getId_salon());
         Picasso.get().load(ApiClient.IMG+datasalon.get(position).getPhoto()).into(holder.ivHome);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(mContext,CustomerGetSalonActivity.class);
+                i.putExtra("id",k.getId_salon());
                 i.putExtra("nama",k.getNama_salon());
-
+                i.putExtra("alamat",k.getAlamat());
+                i.putExtra("image",k.getPhoto());
                 mContext.startActivity(i);
             }
         });
