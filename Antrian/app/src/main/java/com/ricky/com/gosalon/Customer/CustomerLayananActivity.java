@@ -67,7 +67,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
 
                 layoutManager = new LinearLayoutManager(CustomerLayananActivity.this,LinearLayoutManager.VERTICAL,false);;
                 rvLayanan.setLayoutManager(layoutManager);
-                adapterLayanan = new RVPelayanan(dataSetLayanan);
+                adapterLayanan = new RVPelayanan(dataSetLayanan,getApplicationContext());
                 rvLayanan.setAdapter(adapterLayanan);
             }
 

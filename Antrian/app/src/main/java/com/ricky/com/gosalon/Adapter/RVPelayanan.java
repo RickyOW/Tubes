@@ -1,6 +1,8 @@
 package com.ricky.com.gosalon.Adapter;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ricky.com.gosalon.Customer.CustomerDetailLayananActivity;
+import com.ricky.com.gosalon.Customer.CustomerGetSalonActivity;
 import com.ricky.com.gosalon.Model.GetLayanan;
 import com.ricky.com.gosalon.Model.Pelayanan;
 import com.ricky.com.gosalon.R;
@@ -18,9 +22,11 @@ import java.util.List;
 public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
 
     List<GetLayanan> layanan;
+    Context m;
 
-    public RVPelayanan(List<GetLayanan> input){
+    public RVPelayanan(List<GetLayanan> input,Context m){
         layanan=input;
+        this.m= m;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -50,17 +56,34 @@ public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
         return vh;
     }
 
+
+
     @Override
     public void onBindViewHolder(RVPelayanan.ViewHolder holder, int position) {
-        GetLayanan k = layanan.get(position);
+        final GetLayanan k = layanan.get(position);
 
         holder.tvNama.setText(k.getNama());
         holder.tvHarga.setText(k.getHarga());
         holder.tvStatus.setText(k.getStatusLay());
 //        holder.ivLayanan.setImageResource(k.getGambar());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(m,CustomerDetailLayananActivity.class);
+                i.putExtra("id",k.getId_layanan());
+                i.putExtra("nama",k.getNama());
+                i.putExtra("deskripsi",k.getDeskripsi());
+                i.putExtra("harga",k.getHarga());
+                i.putExtra("Image",k.getPhoto());
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                m.startActivity(i);
+            }
+        });
+        };
 
 
-    }
+
+
 
     @Override
     public int getItemCount() {

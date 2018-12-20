@@ -56,7 +56,6 @@ public class RVAdminLayanan extends RecyclerView.Adapter<RVAdminLayanan.ViewHold
                 LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layanan_admin, parent, false);
         // mengeset ukuran view, margin, padding, dan parameter kelas_card lainnya
         RVAdminLayanan.ViewHolder vh = new ViewHolder(v);
-
         return vh;
     }
 
