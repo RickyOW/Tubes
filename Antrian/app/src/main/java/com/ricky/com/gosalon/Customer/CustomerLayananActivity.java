@@ -45,6 +45,7 @@ public class CustomerLayananActivity extends AppCompatActivity {
         rvLayanan = (RecyclerView) findViewById(R.id.recyCustLayanan);
         i = getIntent();
         initDataset();
+        i.getStringExtra("namasalon");
 
 //        btGetLayanan.setOnClickListener(new View.OnClickListener() {
 //            @Override

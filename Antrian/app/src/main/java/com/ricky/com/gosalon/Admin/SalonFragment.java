@@ -46,7 +46,7 @@ public class SalonFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_admin_salon, container, false);
 
-        rv = (RecyclerView) view.findViewById(R.id.RvFragmantUser);
+        rv = (RecyclerView) view.findViewById(R.id.recyAdminSalon);
         rv.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(mLayoutManager);

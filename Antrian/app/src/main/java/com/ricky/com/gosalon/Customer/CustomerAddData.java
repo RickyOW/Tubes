@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.ricky.com.gosalon.LoginActivity;
 import com.ricky.com.gosalon.Model.ResultCustomer;
 import com.ricky.com.gosalon.R;
 import com.ricky.com.gosalon.Rest.ApiClient;
@@ -43,13 +44,13 @@ public class CustomerAddData extends AppCompatActivity {
         setContentView(R.layout.activity_customer_daftar);
         mContext = getApplicationContext();
         mImageView = (ImageView) findViewById(R.id.ImgCustDaftar);
-        btAddPhoto = (Button) findViewById(R.id.btnCustTmbhDaftar);
+        btAddPhoto = (Button) findViewById(R.id.btnCustTmbhImgDaftar);
         edtPassword = (EditText) findViewById(R.id.editCustDaftarPass);
         edtAddNamaCustomer = (EditText) findViewById(R.id.editCustDaftarUsername);
         edtAddAlamatCustomer = (EditText) findViewById(R.id.editCustDaftarAlamat);
         edtAddJnsKel = (EditText) findViewById(R.id.editCustJenisKelamin);
         btAddData = (Button) findViewById(R.id.btnCustTmbhDaftar);
-        //btAddBack = (Button) findViewById(R.id.btAddBack);
+        btAddBack = (Button) findViewById(R.id.btnCustCancelDaftar);
         tvAddMessage = (TextView) findViewById(R.id.txtMessage);
         btAddData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +86,7 @@ public class CustomerAddData extends AppCompatActivity {
                             String detail = "\n"+
                                     "nama = "+response.body().getResult().get(0).getNama()
                                     +"\n"+ "alamat = "+response.body().getResult().get(0).getAlamat()
-                                    +"\n"+ "sex = "+response.body().getResult().get(0).getJenis_kelamin()
+                                    +"\n"+ "jenis_kelamin = "+response.body().getResult().get(0).getJenis_kelamin()
                                     +"\n"+ "photo = "+response.body().getResult().get(0).getPhoto()
                                     +"\n"+ "password = "+response.body().getResult().get(0).getPass()
                                     +"\n";tvAddMessage.setText("Retrofit Update \n Status = "+response.body().getStatus()
@@ -95,7 +96,7 @@ public class CustomerAddData extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResultCustomer> call, Throwable t) {
 // Log.d("Insert Retrofit", t.getMessage());
-                        tvAddMessage.setText("Retrofit Update \n Status = "+ t.getMessage());
+                        //tvAddMessage.setText("Retrofit Update \n Status = "+ t.getMessage());
                     }
                 });
             }
@@ -108,6 +109,13 @@ public class CustomerAddData extends AppCompatActivity {
                 galleryIntent.setAction(Intent.ACTION_PICK);
                 Intent intentChoose = Intent.createChooser(galleryIntent, "Pilih Gambar Untuk Di upload");
                 startActivityForResult(intentChoose, 10);
+            }
+        });
+        btAddBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
             }
         });
     }

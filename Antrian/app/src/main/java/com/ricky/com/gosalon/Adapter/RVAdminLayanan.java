@@ -66,7 +66,7 @@ public class RVAdminLayanan extends RecyclerView.Adapter<RVAdminLayanan.ViewHold
         holder.tvHarga.setText(k.getHarga());
         holder.tvStatus.setText(k.getStatusLay());
         if (k.getPhoto().length()>0){
-            Glide.with(holder.itemView.getContext()).load(ApiClient.IMGLayanan+layanan.get(position).getPhoto()).into(holder.ivLayanan);
+            Glide.with(holder.itemView.getContext()).load(ApiClient.BASE_upload+layanan.get(position).getPhoto()).into(holder.ivLayanan);
             //Glide.with(holder.itemView.getContext()).load(ApiClient.BASE_upload+listPembeli.get(position).getPhotoId()).into(holder.mPhotoid);
 
         }else{

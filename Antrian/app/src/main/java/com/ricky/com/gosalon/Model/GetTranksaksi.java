@@ -7,8 +7,8 @@ public class GetTranksaksi {
     private String id_pesanan;
     @SerializedName("id_cust")
     private String id_cut;
-    @SerializedName("no_antrian")
-    private String no_antri;
+    @SerializedName("status")
+    private int status;
     @SerializedName("nama_salon")
     private String nama_salon;
     @SerializedName("nama_layanan")
@@ -20,10 +20,10 @@ public class GetTranksaksi {
 
     public GetTranksaksi(){
     }
-    public GetTranksaksi(String id_pesanan, String id_cut, String no_antri, String nama_salon, String nama_layanan, String total, String tanggal) {
+    public GetTranksaksi(String id_pesanan, String id_cut, int status, String nama_salon, String nama_layanan, String total, String tanggal) {
         this.id_pesanan = id_pesanan;
         this.id_cut = id_cut;
-        this.no_antri = no_antri;
+        this.status = status;
         this.nama_salon = nama_salon;
         this.nama_layanan = nama_layanan;
         this.total = total;
@@ -46,12 +46,12 @@ public class GetTranksaksi {
         this.id_cut = id_cut;
     }
 
-    public String getNo_antri() {
-        return no_antri;
+    public int getStatus() {
+        return status;
     }
 
-    public void setNo_antri(String no_antri) {
-        this.no_antri = no_antri;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getNama_salon() {

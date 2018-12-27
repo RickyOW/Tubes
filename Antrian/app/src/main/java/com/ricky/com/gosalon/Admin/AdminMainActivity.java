@@ -46,6 +46,12 @@ public class AdminMainActivity extends AppCompatActivity {
                     fragmentLayananTransaction.replace(R.id.fragment_container_admin, layananFragment);
                     fragmentLayananTransaction.commit();
                     return true;
+                case R.id.nav_profil_admin:
+                    AdminProfil profilAdmin = new AdminProfil();
+                    FragmentTransaction fragmentProfilTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentProfilTransaction.replace(R.id.fragment_container_admin, profilAdmin);
+                    fragmentProfilTransaction.commit();
+                    return true;
 
             }
             return false;

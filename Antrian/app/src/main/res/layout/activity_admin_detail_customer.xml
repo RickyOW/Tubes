@@ -50,12 +50,13 @@
         tools:layout_editor_absoluteY="46dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnAdminDtlCustBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="170dp"
-        android:text="Kembali" />
+        android:background="@drawable/ic_arrow_back"
+        android:text="" />
 
 </RelativeLayout>

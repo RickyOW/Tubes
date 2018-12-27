@@ -6,32 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.ricky.com.gosalon.Customer.CustomerAddData">
 
-    <EditText
-        android:id="@+id/editCustDaftarUsername"
-        android:layout_width="199dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/btnCustTmbhDaftar"
-        android:layout_marginTop="185dp"
-        android:ems="10"
-        android:inputType="text" />
-
-
-    <Button
-        android:id="@+id/btnCustTmbhDaftar"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Daftar" />
+        android:layout_marginBottom="109dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnCustCancelDaftar"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnCustTmbhDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_add"
+            android:text="Daftar" />
+
+        <Button
+            android:id="@+id/btnCustCancelDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editCustDaftarUsername"
+        android:layout_width="199dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editCustDaftarUsername"
-        android:layout_alignTop="@+id/btnCustTmbhDaftar"
-        android:text="Cancel" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="185dp"
+        android:ems="10"
+        android:inputType="text" />
+
 
     <EditText
         android:id="@+id/editCustDaftarAlamat"
@@ -128,15 +139,17 @@
         android:layout_above="@+id/editCustDaftarUsername"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-177dp"
-        android:text="Ambil Gambal" />
+        android:drawableLeft="@drawable/ic_add_photo"
+        android:text="Tambah Gambar" />
 
     <TextView
         android:id="@+id/txtMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView9"
-        android:layout_marginBottom="106dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="46dp"
         android:text="Status" />
 
 </RelativeLayout>

@@ -1,9 +1,11 @@
 package com.ricky.com.gosalon.Rest;
 
 import com.ricky.com.gosalon.Customer.PostPutDelCustomer;
+import com.ricky.com.gosalon.Model.PostPutDelTranksaksi;
 import com.ricky.com.gosalon.Model.ResultCustomer;
 import com.ricky.com.gosalon.Model.ResultLayanan;
 import com.ricky.com.gosalon.Model.ResultSalon;
+import com.ricky.com.gosalon.Model.ResultTranksaksi;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -86,5 +88,16 @@ public interface ApiInterface {
     @POST("layanan")
     Call<ResultLayanan> deleteLayanan(@Part("id_layanan") RequestBody idLay,
                                       @Part("action") RequestBody action);
+
+    @FormUrlEncoded
+    @POST("tranksaksi")
+    Call<PostPutDelTranksaksi> postTranksaksi(@Field ("id_cust") String id_cust,
+                                              @Field ("status") int status,
+                                              @Field("nama_salon") String nama_salon,
+                                              @Field("nama_layanan") String nama_layanan,
+                                              @Field("total") String total
+    );
+
+
 
 }

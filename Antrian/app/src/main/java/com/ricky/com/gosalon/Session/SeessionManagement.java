@@ -22,8 +22,9 @@ public class SeessionManagement {
 
     private static final String PREF_NAME = "SharedPrefLatihan";
     private static final String IS_LOGIN = "Isloggedin";
-    private static final String KEY_ID = "id";
-    private static final String KEY_PASSWORD = "password";
+    public static final String KEY_ID = "id";
+    public static final String KEY_LEVEL = "level";
+//    private static final String KEY_PASSWORD = "password";
 
 
     public SeessionManagement(Context mContext){
@@ -32,44 +33,46 @@ public class SeessionManagement {
         mEditor = mSharedPreferences.edit();
     }
 
-    public void createLoginSession(String id, String pass){
+    public void createLoginSession(String id, String level){
         mEditor.putBoolean(IS_LOGIN,true);
         mEditor.putString(KEY_ID, id);
-        mEditor.putString(KEY_PASSWORD,pass);
+        //mEditor.putString(KEY_PASSWORD,pass);
+        mEditor.putString(KEY_LEVEL,level );
         mEditor.commit();
     }
     public HashMap<String, String> getUserInformation(){
-        HashMap<String, String> user = new HashMap<String, String>();
-// user email
+
+        HashMap<String,String> user = new HashMap<String, String>();
+        // user id
         user.put(KEY_ID, mSharedPreferences.getString(KEY_ID, null));
-// user password
-        user.put(KEY_PASSWORD, mSharedPreferences.getString(KEY_PASSWORD,
-                null));
-// return user
+        // user nama
+        //user.put(KEY_ID, mSharedPreferences.getString(KEY_ID, null));
+        return user;
+    }
+
+    public HashMap<String, String> getLevelInformation(){
+
+        HashMap<String,String> user = new HashMap<String, String>();
+        // user id
+        user.put(KEY_ID, mSharedPreferences.getString(KEY_ID, null));
+//         user level
+        user.put(KEY_LEVEL, mSharedPreferences.getString(KEY_LEVEL, null));
+//         return user
         return user;
     }
     public boolean isLoggedIn(){
         return mSharedPreferences.getBoolean(IS_LOGIN, false);
     }
-    public void checkIsLogin() {
-// Check login status
-        if (!isLoggedIn()) {
-// user is not logged in redirect to CustomerMainActivity
-            Intent i = new Intent(mContext, LoginActivity.class);
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-// Add new Flag to start new Activity
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            mContext.startActivity(i);
-        }
-    }
+
     public void logoutUser(){
         mEditor.clear();
         mEditor.commit();
         Intent i = new Intent(mContext, LoginActivity.class);
-        //mEditor.putBoolean(IS_LOGIN,false);
+        mEditor.putBoolean(IS_LOGIN,false);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(i);
+
 
     }
 

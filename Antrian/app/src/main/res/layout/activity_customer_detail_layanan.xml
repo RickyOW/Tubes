@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="254dp"
         android:layout_weight="1"
+        android:padding="10dp"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <LinearLayout
@@ -26,26 +27,69 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Layanan :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/txtCustDtlLayNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:paddingLeft="10dp"
+                android:text="TextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Deskripsi :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCustDtlLayDeskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:paddingLeft="10dp"
+                android:text="TextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Harga :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCustDtlLayHarga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:paddingLeft="10dp"
+                android:text="TextView"
+                android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCustDtlKonfirmasiPesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_check"
+        android:text=" Konfirmasi"
+         />
 
 </LinearLayout>

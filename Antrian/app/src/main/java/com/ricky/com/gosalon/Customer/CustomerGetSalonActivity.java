@@ -32,16 +32,16 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
 
 
         final Intent in = getIntent();
-        nama.setText(in.getStringExtra("nama"));
+        nama.setText(in.getStringExtra("namalayanan"));
         alamat.setText(in.getStringExtra("alamat"));
         Picasso.get().load(ApiClient.IMG+in.getStringExtra("Image")).into(photo);
-
-        Intent i = getIntent();
-        nama.setText(i.getStringExtra("nama"));
-        alamat.setText(i.getStringExtra("alamat"));
-        x = i.getStringExtra("x");
-        y = i.getStringExtra("y");
-        Picasso.get().load(ApiClient.IMG+i.getStringExtra("Image")).into(photo);
+//
+//        Intent i = getIntent();
+//        nama.setText(i.getStringExtra("namalayanan"));
+//        alamat.setText(i.getStringExtra("alamat"));
+//        x = i.getStringExtra("x");
+//        y = i.getStringExtra("y");
+//        Picasso.get().load(ApiClient.IMG+i.getStringExtra("Image")).into(photo);
 
 
         btPesan.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +49,7 @@ public class CustomerGetSalonActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), CustomerLayananActivity.class);
                 i.putExtra("id", in.getStringExtra("id"));
+                i.putExtra("namasalon","salon");
                 startActivity(i);
             }
         });

@@ -65,13 +65,14 @@ public class RVPelayanan extends RecyclerView.Adapter<RVPelayanan.ViewHolder> {
         holder.tvNama.setText(k.getNama());
         holder.tvHarga.setText(k.getHarga());
         holder.tvStatus.setText(k.getStatusLay());
-//        holder.ivLayanan.setImageResource(k.getGambar());
+       holder.ivLayanan.setImageResource(R.drawable.ic_scis);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(m,CustomerDetailLayananActivity.class);
-                i.putExtra("id",k.getId_layanan());
-                i.putExtra("nama",k.getNama());
+                i.putExtra("idlayanan",k.getId_layanan());
+                i.putExtra("idsalon",k.getId_salon());
+                i.putExtra("namalayanan",k.getNama());
                 i.putExtra("deskripsi",k.getDeskripsi());
                 i.putExtra("harga",k.getHarga());
                 i.putExtra("Image",k.getPhoto());

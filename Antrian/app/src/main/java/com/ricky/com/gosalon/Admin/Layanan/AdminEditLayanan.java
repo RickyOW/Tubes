@@ -51,7 +51,7 @@ public class AdminEditLayanan extends AppCompatActivity {
         tvStatusLay.setText(mIntent.getStringExtra("status"));
         imagePath = mIntent.getStringExtra("photo");
         if (imagePath.length()>0){
-            Glide.with(mContext).load(ApiClient.IMGLayanan + imagePath).into(imgLay);
+            Glide.with(mContext).load(ApiClient.BASE_upload + imagePath).into(imgLay);
         }
         else{
             Glide.with(mContext).load(R.drawable.ic_spa_black).into(imgLay);

@@ -6,8 +6,8 @@ import com.google.gson.annotations.SerializedName;
  * Created by alhamdulillah on 11/2/16.
  */
 public class GetCustomer {
-//    @SerializedName("id_cust")
-//    private String idCust;
+    @SerializedName("id_cust")
+    private String idCust;
 
     @SerializedName("nama_cust")
     private String nama;
@@ -42,12 +42,12 @@ public class GetCustomer {
         this.action = action;
         this.level= level;
     }
-//    public String getIdCust() {
-//        return idCust;
-//    }
-//    public void setIdCust(String idCust) {
-//        this.idCust = idCust;
-//    }
+    public String getIdCust() {
+        return idCust;
+    }
+    public void setIdCust(String idCust) {
+        this.idCust = idCust;
+    }
     public String getNama() {
         return nama;
     }

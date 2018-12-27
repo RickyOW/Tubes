@@ -51,7 +51,8 @@ public class RVSalon extends RecyclerView.Adapter<RVSalon.ViewHolder> {
     public void onBindViewHolder(RVSalon.ViewHolder holder, int position) {
         GetSalon k = salonan.get(position);
         holder.tvNama.setText(k.getNama_salon());
-        Picasso.get().load(ApiClient.IMG+salonan.get(position).getPhoto()).into(holder.ivHome);
+        //Picasso.get().load(ApiClient.IMG+salonan.get(position).getPhoto()).into(holder.ivHome);
+        holder.ivHome.setImageResource(R.drawable.ic_spa_black);
 
 
     }
