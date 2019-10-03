@@ -1,10 +1,8 @@
 package com.ricky.com.gosalon;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,20 +25,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
-    private Button btLogin,btDaftar;
+    Button btnLogin;
+    Button btnDaftar;
     ApiInterface mApiInterface;
     SeessionManagement mSesi;
     RelativeLayout lay;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        btLogin = findViewById(R.id.btnLogin);
-        btDaftar = findViewById(R.id.btnDaftarLogin);
+        btnLogin = findViewById(R.id.btnLogin);
+        btnDaftar = findViewById(R.id.btnDaftarLogin);
         lay = findViewById(R.id.layLogin);
         final EditText nama_cust = findViewById(R.id.editLoginUsername);
         final EditText password = findViewById(R.id.editLoginPass);
@@ -61,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
-    btLogin.setOnClickListener(new View.OnClickListener() {
+    btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
 
@@ -101,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     });
 
-        btDaftar.setOnClickListener(new View.OnClickListener() {
+        btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), CustomerAddData.class);
